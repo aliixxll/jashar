@@ -1,0 +1,58 @@
+<svg width="49" height="31" viewBox="0 0 49 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<style>
+
+    @-webkit-keyframes floating-up-left {
+       from { -webkit-transform: translate(0,  0px); transform: translate(0,  0px); }
+      65%  { -webkit-transform: translate(5px, 0); transform: translate(5px, 0); }
+      to   { -webkit-transform: translate(0, 0px); transform: translate(0, 0px); }  
+    }
+
+    @-webkit-keyframes floating-up-right {
+      from { -webkit-transform: translate(0,  0px); transform: translate(0,  0px); }
+      65%  { -webkit-transform: translate(-5px,0); transform: translate(-5px, 0); }
+      to   { -webkit-transform: translate(0, 0px); transform: translate(0, 0px); }    
+    }
+
+    @-webkit-keyframes floating-right {
+      from { -webkit-transform: translate(0,  0px); transform: translate(0,  0px); }
+      65%  { -webkit-transform: translate(-5px,0); transform: translate(-5px, 0); }
+      to   { -webkit-transform: translate(0, 0px); transform: translate(0, 0px); }   
+    }
+
+    @-webkit-keyframes floating-left {
+     from { -webkit-transform: translate(0,  0px); transform: translate(0,  0px); }
+      65%  { -webkit-transform: translate(5px, 0); transform: translate(5px, 0); }
+      to   { -webkit-transform: translate(0, 0px); transform: translate(0, 0px); }       
+    }
+
+
+    #grid-1, #grid-5, #grid-9{
+         animation: 2s ease-in-out 0s infinite running floating-up-left;
+    }
+     #grid-2, #grid-6, #grid-10{
+        animation: 2s ease-in-out 0s infinite running floating-right; 
+     }
+     #grid-3, #grid-7, #grid-11{
+        animation: 2s ease-in-out 0s infinite running floating-left;
+     }
+    #grid-4, #grid-8, #grid-12{
+        animation: 2s ease-in-out 0s infinite running floating-up-right;
+     }
+
+</style>
+
+
+<path id="grid-1" d="M1.61967 3.23936C0.730108 3.23936 0 2.51764 0 1.61968C0 0.730115 0.721716 0 1.61967 0C2.51763 0 3.23935 0.721723 3.23935 1.61968C3.23935 2.50924 2.50924 3.23936 1.61967 3.23936Z" fill="#FF5E14" fill-opacity="0.3"/>
+<path id="grid-2" d="M16.8433 3.23936C15.9537 3.23936 15.2236 2.51764 15.2236 1.61968C15.2236 0.730115 15.9453 0 16.8433 0C17.7329 0 18.463 0.721723 18.463 1.61968C18.4546 2.50924 17.7329 3.23936 16.8433 3.23936Z" fill="#FF5E14" fill-opacity="0.3"/>
+<path id="grid-3" d="M32.0581 3.23936C31.1686 3.23936 30.4385 2.51764 30.4385 1.61968C30.4385 0.730115 31.1602 0 32.0581 0C32.9477 0 33.6778 0.721723 33.6778 1.61968C33.6778 2.50924 32.9561 3.23936 32.0581 3.23936Z" fill="#FF5E14" fill-opacity="0.3"/>
+<path id="grid-4" d="M47.2813 3.23936C46.3918 3.23936 45.6616 2.51764 45.6616 1.61968C45.6616 0.730115 46.3834 0 47.2813 0C48.1709 0 48.901 0.721723 48.901 1.61968C48.901 2.50924 48.1709 3.23936 47.2813 3.23936Z" fill="#FF5E14" fill-opacity="0.3"/>
+<path id="grid-5" d="M1.61967 17.12C0.730108 17.12 0 16.3983 0 15.5003C0 14.6107 0.721716 13.8806 1.61967 13.8806C2.51763 13.8806 3.23935 14.6023 3.23935 15.5003C3.23935 16.3899 2.50924 17.12 1.61967 17.12Z" fill="#FF5E14" fill-opacity="0.3"/>
+<path id="grid-6" d="M16.8433 17.12C15.9537 17.12 15.2236 16.3983 15.2236 15.5003C15.2236 14.6107 15.9453 13.8806 16.8433 13.8806C17.7329 13.8806 18.463 14.6023 18.463 15.5003C18.4546 16.3899 17.7329 17.12 16.8433 17.12Z" fill="#FF5E14" fill-opacity="0.3"/>
+<path id="grid-7" d="M32.0581 17.12C31.1686 17.12 30.4385 16.3983 30.4385 15.5003C30.4385 14.6107 31.1602 13.8806 32.0581 13.8806C32.9477 13.8806 33.6778 14.6023 33.6778 15.5003C33.6778 16.3899 32.9561 17.12 32.0581 17.12Z" fill="#FF5E14" fill-opacity="0.3"/>
+<path id="grid-8" d="M47.2813 17.12C46.3918 17.12 45.6616 16.3983 45.6616 15.5003C45.6616 14.6107 46.3834 13.8806 47.2813 13.8806C48.1709 13.8806 48.901 14.6023 48.901 15.5003C48.901 16.3899 48.1709 17.12 47.2813 17.12Z" fill="#FF5E14" fill-opacity="0.3"/>
+<path id="grid-9" d="M1.61967 30.9922C0.730108 30.9922 0 30.2704 0 29.3725C0 28.4829 0.721716 27.7528 1.61967 27.7528C2.51763 27.7528 3.23935 28.4745 3.23935 29.3725C3.23935 30.2704 2.50924 30.9922 1.61967 30.9922Z" fill="#FF5E14" fill-opacity="0.3"/>
+<path id="grid-10" d="M16.8433 30.9922C15.9537 30.9922 15.2236 30.2704 15.2236 29.3725C15.2236 28.4829 15.9453 27.7528 16.8433 27.7528C17.7329 27.7528 18.463 28.4745 18.463 29.3725C18.4546 30.2704 17.7329 30.9922 16.8433 30.9922Z" fill="#FF5E14" fill-opacity="0.3"/>
+<path id="grid-11" d="M32.0581 30.9922C31.1686 30.9922 30.4385 30.2704 30.4385 29.3725C30.4385 28.4829 31.1602 27.7528 32.0581 27.7528C32.9477 27.7528 33.6778 28.4745 33.6778 29.3725C33.6778 30.2704 32.9561 30.9922 32.0581 30.9922Z" fill="#FF5E14" fill-opacity="0.3"/>
+<path id="grid-12" d="M47.2813 30.9922C46.3918 30.9922 45.6616 30.2704 45.6616 29.3725C45.6616 28.4829 46.3834 27.7528 47.2813 27.7528C48.1709 27.7528 48.901 28.4745 48.901 29.3725C48.901 30.2704 48.1709 30.9922 47.2813 30.9922Z" fill="#FF5E14" fill-opacity="0.3"/>
+</svg>

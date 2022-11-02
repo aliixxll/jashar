@@ -1,0 +1,427 @@
+{% extends 'homepage.html' %}  
+{% load static %}
+{% block content %}
+    <!-- preloader -->
+    <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <div class="spinner">                
+            </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="B" class="letters-loading">
+                        B
+                    </span>
+                    <span data-text-preloader="U" class="letters-loading">
+                        U
+                    </span>
+                    <span data-text-preloader="S" class="letters-loading">
+                       S
+                    </span>
+                    <span data-text-preloader="I" class="letters-loading">
+                        I
+                    </span>
+                    <span data-text-preloader="C" class="letters-loading">
+                        C
+                    </span>
+                    <span data-text-preloader="O" class="letters-loading">
+                        O
+                    </span>
+                </div>
+            <p class="text-center">Loading</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offset-menu">
+        <span id="offset-menu-close-btn"><i class="fal fa-plus"></i></span>
+        <div class="offset-menu-wrapper text-white">
+            <div class="offset-menu-header">
+                <div class="offset-menu-logo">
+                    <a href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+                </div>
+            </div> 
+            <div class="offset-menu-section">
+                <h3>About Us</h3>
+                <p>We must explain to you how all seds this mistakens idea off denouncing pleasures and praising pain was born and I will give you a completed</p>
+                <a href="contact.html" class="theme-btn  mt-30">Consultation</a>
+            </div>
+            <div class="offset-menu-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><span><i class="fal fa-map"></i></span>Rock St 12, Newyork City, USA</li>
+                    <li><span><i class="fal fa-phone"></i></span>(000) 000-000-0000</li>
+                    <li><span><i class="fal fa-envelope"></i></span>info@example.com</li>
+                    <li><span><i class="fal fa-clock"></i></span>Week Days: 09.00 to 18.00</li>
+                    <li><span><i class="fal fa-clock"></i></span>Sunday: Closed</li>
+                </ul>
+            </div> 
+            <div class="offset-menu-footer">
+                <div class="offset-menu-social-icon">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div> <!-- /.offset-menu-footer -->       
+        </div> <!-- /.offset-menu-wrapper -->               
+    </div> <!-- /.offset-menu --> 
+
+    <!-- welcome content start from here -->
+ {%include 'include/header.html'%}
+    <div class="page-banner-wrap bg-cover" style="background-image: url('assets/img/page-banner.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12">
+                    <div class="page-heading text-white">
+                        <h1>Новости</h1>
+                    </div>
+                    <div class="breadcrumb-wrap">
+                        <nav>
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="index.html">Домой</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Новости</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="blog-wrapper news-wrapper section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div class="blog-posts">
+                        {% for news in news %}
+                        <div class="single-blog-post">
+                            <div class="post-featured-thumb bg-cover" style="background-image: url('{{news.image_news.url}}')"></div>
+                            <div class="post-content">
+                                <div class="post-cat">
+                                    <a href="news.html">BUILDING</a>
+                                </div>
+                                <h2><a href="{% url 'news_detail' news.id %}">{{ news.title_news|truncatewords:4 }}</a></h2>
+                                <div class="post-meta">
+                                    <span><i class="fal fa-comments"></i>35 Comments</span>
+                                    <span><i class="fal fa-calendar-alt"></i>{{news.created_news }}</span>
+                                </div>
+                                <p>{{news.description|truncatewords:4}}</p>
+                                <div class="d-flex justify-content-between align-items-center mt-30">
+                                    <div class="author-info">
+                                        <div class="author-img" style="background-image: url('assets/img/blog/author_img.jpg')"></div>
+                                        <h5><a href="#">by Hetmayar</a></h5>
+                                    </div>
+                                    <div class="post-link">
+                                        <a href="news-details.html"><i class="fal fa-arrow-right"></i> Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor%}
+                        <div class="single-blog-post quote-post format-quote">
+                            <div class="post-content text-white bg-cover">
+                                <div class="quote-content">
+                                    <div class="icon">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <div class="quote-text">
+                                        <h2>Excepteur sint occaecat cupida tat non proident, sunt in.</h2>
+                                        <div class="post-meta">
+    
+                                            <span><i class="fal fa-comments"></i>35 Comments</span>
+                                            <span><i class="fal fa-calendar-alt"></i>24th March 2019</span>
+                                        </div>
+                                    </div>
+                                </div>                                                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-nav-wrap mt-60 text-center">
+                        <ul>
+                            <li><a href="#"><i class="fal fa-long-arrow-left"></i></a></li>
+                            <li><a href="#">01</a></li>
+                            <li><a href="#">02</a></li>
+                            <li><a href="#">..</a></li>
+                            <li><a href="#">10</a></li>
+                            <li><a href="#">11</a></li>
+                            <li><a href="#"><i class="fal fa-long-arrow-right"></i></a></li>
+                        </ul>
+                    </div> <!-- /.col-12 col-lg-12 --> 
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="main-sidebar">
+                        <div class="single-sidebar-widget author-box-widegts">
+                            <div class="wid-title">
+                                <h3>About Me</h3>
+                            </div>
+                            <div class="author-info text-center">
+                                <div class="author-img" style="background-image: url('assets/img/blog/author_img.jpg');"></div>
+                                <h4>Rosalina D. Willaimson</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                                <div class="social-profile">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-sidebar-widget">
+                            <div class="wid-title">
+                                <h3>Search Objects</h3>
+                            </div>
+                            <div class="search_widget">
+                                <form action="#">
+                                    <input type="text" placeholder="Search your keyword...">
+                                    <button type="submit"><i class="fal fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="single-sidebar-widget">
+                            <div class="wid-title">
+                                <h3>Popular Feeds</h3>
+                            </div>
+                            <div class="popular-posts">
+                                <div class="single-post-item">
+                                    <div class="thumb bg-cover" style="background-image: url('assets/img/blog/pp1.jpg')"></div>
+                                    <div class="post-content">
+                                        <h5><a href="news-details.html">Lorem ipsum dolor sit cing elit, sed do.</a></h5>
+                                        <div class="post-date">
+                                            <i class="far fa-calendar-alt"></i>24th March 2019
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-post-item">
+                                    <div class="thumb bg-cover" style="background-image: url('assets/img/blog/pp2.jpg')"></div>
+                                    <div class="post-content">
+                                        <h5><a href="news-details.html">Lorem ipsum dolor sit cing elit, sed do.</a></h5>
+                                        <div class="post-date">
+                                            <i class="far fa-calendar-alt"></i>25th March 2019
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-post-item">
+                                    <div class="thumb bg-cover" style="background-image: url('assets/img/blog/pp3.jpg')"></div>
+                                    <div class="post-content">
+                                        <h5><a href="news-details.html">Lorem ipsum dolor sit cing elit, sed do.</a></h5>
+                                        <div class="post-date">
+                                            <i class="far fa-calendar-alt"></i>26th March 2019
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-post-item">
+                                    <div class="thumb bg-cover" style="background-image: url('assets/img/blog/pp4.jpg')"></div>
+                                    <div class="post-content">
+                                        <h5><a href="news-details.html">Lorem ipsum dolor sit cing elit, sed do.</a></h5>
+                                        <div class="post-date">
+                                            <i class="far fa-calendar-alt"></i>29th March 2019
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-sidebar-widget">
+                            <div class="wid-title">
+                                <h3>Categories</h3>
+                            </div>
+                            <div class="widget_categories">
+                                <ul>
+                                    <li><a href="news.html">Consultant <span>23</span></a></li>
+                                    <li><a href="news.html">Help <span>24</span></a></li>
+                                    <li><a href="news.html">Education <span>11</span></a></li>
+                                    <li><a href="news.html">Technology <span>05</span></a></li>
+                                    <li><a href="news.html">business <span>06</span></a></li>
+                                    <li><a href="news.html">Events <span>10</span></a></li>    
+                                </ul>                                
+                            </div>
+                        </div>
+                        <div class="single-sidebar-widget">
+                            <div class="wid-title">
+                                <h3>Never Miss News</h3>
+                            </div>
+                            <div class="social-link">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="single-sidebar-widget instagram-widget">
+                            <div class="wid-title">
+                                <h3>Instagram Feeds</h3>
+                            </div>
+                            <div class="instagram-gallery">
+                                <a href="assets/img/blog/ip1.jpg" class="single-photo-item bg-cover popup-gallery" style="background-image: url('assets/img/blog/ip1.jpg')">                                    
+                                </a>
+                                <a href="assets/img/blog/ip2.jpg" class="single-photo-item bg-cover popup-gallery" style="background-image: url('assets/img/blog/ip2.jpg')">                                    
+                                </a>
+                                <a href="assets/img/blog/ip3.jpg" class="single-photo-item bg-cover popup-gallery" style="background-image: url('assets/img/blog/ip3.jpg')">                                    
+                                </a>
+                                <a href="assets/img/blog/ip4.jpg" class="single-photo-item bg-cover popup-gallery" style="background-image: url('assets/img/blog/ip4.jpg')">                                    
+                                </a>
+                                <a href="assets/img/blog/ip5.jpg" class="single-photo-item bg-cover popup-gallery" style="background-image: url('assets/img/blog/ip5.jpg')">                                    
+                                </a>
+                                <a href="assets/img/blog/ip7.jpg" class="single-photo-item bg-cover popup-gallery" style="background-image: url('assets/img/blog/ip7.jpg')">                                    
+                                </a>
+                            </div>
+                        </div>
+                        <div class="single-sidebar-widget">
+                            <div class="wid-title">
+                                <h3>Popular Tags</h3>
+                            </div>
+                            <div class="tagcloud">
+                                <a href="#">event</a>     
+                                <a href="#">help</a>
+                                <a href="#">ux</a>
+                                <a href="#">food</a>                                
+                                <a href="#">ui</a>
+                                <a href="#">water</a>
+                                <a href="#">charity</a>
+                                <a href="#">donate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer-2 footer-wrap">
+        <div class="footer-widgets-wrapper text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 pe-xl-0 col-sm-6 col-12">
+                        <div class="single-footer-wid site_info_widget">
+                            <div class="wid-title">
+                                <h3>Get In Touch</h3>
+                            </div>
+                            <div class="contact-us">
+                                <div class="single-contact-info">
+                                    <div class="icon">
+                                        <i class="fal fa-phone"></i>
+                                    </div>
+                                    <div class="contact-info">
+                                        <p>+673 853 605 985</p>
+                                        <p>908 9098 987 98</p>
+                                    </div>
+                                </div>
+                                <div class="single-contact-info">
+                                    <div class="icon">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-info">
+                                        <p>info@example.com</p>
+                                        <p>info@webexample.com</p>
+                                    </div>
+                                </div>
+                                <div class="single-contact-info">
+                                    <div class="icon">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-info">
+                                        <p>7300-7398 Colonial Rd, Brooklyn, <br>
+                                            NY 11209</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 offset-xl-1 col-xl-3 ps-xl-5 col-12">
+                        <div class="single-footer-wid">
+                            <div class="wid-title">
+                                <h3>Quick Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="about.html">About Company</a></li>
+                                <li><a href="services.html">Communication Services</a></li>
+                                <li><a href="services.html">Internet of Things</a></li>
+                                <li><a href="services.html">Product Development</a></li>
+                                <li><a href="services.html">Industrial Automation</a></li>
+                                <li><a href="contact.html">Payment Getway</a></li>
+                            </ul>
+                        </div>
+                    </div> <!-- /.col-lg-3 - single-footer-wid -->
+
+                    <div class="col-sm-6 col-xl-4 offset-xl-1 col-12">                        
+                        <div class="single-footer-wid newsletter_widget">
+                            <div class="wid-title">
+                                <h3>Our Footprint</h3>
+                            </div>
+                            <div class="map-location">
+                                <img src="assets/img/footer-map.png" alt="">
+                            </div>
+                        </div>
+                    </div> <!-- /.col-lg-3 - single-footer-wid -->
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-cta-wrapper">
+            <div class="container">
+                <div class="footer-cta-bg-wrapper">
+                    <div class="row justify-content-around align-items-center">
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <div class="footer-logo">
+                                <a href="index.html">
+                                    <img src="assets/img/footer-logo.png" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-5 ps-lg-0 offset-lg-1 col-12">
+                            <div class="footer-middle-text mt-4 mb-4 mt-md-0 mb-md-0 text-white">
+                                <p>Become an innovative entrepreneurial & empowered company constantly creating mission to be a world class construction company.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-12">
+                            <div class="footer-social-icon ms-lg-5 text-lg-md-end">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-12 text-center text-md-start">
+                        <div class="copyright-info">
+                            <p>&copy; 2022 Copyright By <a href="index.html">Busico</a>. All Rights Reserved</p>                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="footer-menu mt-3 mt-md-0 text-center text-md-end">
+                            <ul>
+                                <li><a href="#">Teams & Conditions</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> 
+{% endblock %}

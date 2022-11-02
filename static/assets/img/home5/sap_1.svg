@@ -1,0 +1,53 @@
+<svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<style>
+    <!-- done -->
+      @keyframes pulse {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        70% {
+          -webkit-transform: scale(1.7);
+          transform: scale(1.7);
+        }
+        100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      } 
+
+      @-webkit-keyframes floating-back {
+        from { -webkit-transform: translate(0,  0px); transform: translate(0,  0px); }
+        65%  { -webkit-transform: translate(0, -1px); transform: translate(0, -1px); }
+        to   { -webkit-transform: translate(0, 0px); transform: translate(0, 0px); }    
+    }
+
+    #image {
+      animation-duration: 2s; 
+      animation-name: floating-back; 
+      animation-iteration-count: infinite; 
+      animation-timing-function: ease-in-out;
+    }  
+
+    #path-1, #path-2, #path-3, #path-4 {
+      animation: pulse 2s ease-in-out infinite;
+      -webkit-animation: pulse 2s ease-in-out infinite;
+      -webkit-transform-origin: center; -ms-transform-origin: center; transform-origin: center; transform-box: fill-box;
+    }
+
+    #path-1, #path-4{
+      animation-delay: 1s;
+    }
+
+    #path-2,  #path-3 {
+      animation-delay: 1.5s;
+    }
+
+</style>
+
+<path id="path-1" d="M2.50004 4.99994C1.127 4.99994 0 3.88596 0 2.49997C0 1.12693 1.11405 0 2.50004 0C3.87308 0 5 1.11398 5 2.49997C5 3.87301 3.88603 4.99994 2.50004 4.99994Z" fill="#FF5E14" fill-opacity="0.15"/>
+<path id="path-2" d="M17.7231 4.99986C16.3501 4.99986 15.2231 3.8859 15.2231 2.49993C15.2231 1.12691 16.3371 0 17.7231 0C19.1092 0 20.2231 1.11396 20.2231 2.49993C20.2231 3.87295 19.0962 4.99986 17.7231 4.99986Z" fill="#FF5E14" fill-opacity="0.15"/>
+<path id="path-3" d="M2.50004 18.8805C1.127 18.8805 0 17.7665 0 16.3805C0 15.0075 1.11405 13.8806 2.50004 13.8806C3.87308 13.8806 5 14.9945 5 16.3805C5 17.7536 3.88603 18.8805 2.50004 18.8805Z" fill="#FF5E14" fill-opacity="0.15"/>
+<path id="path-4" d="M17.7231 18.8804C16.3501 18.8804 15.2231 17.7664 15.2231 16.3805C15.2231 15.0075 16.3371 13.8806 17.7231 13.8806C19.1092 13.8806 20.2231 14.9945 20.2231 16.3805C20.2231 17.7535 19.0962 18.8804 17.7231 18.8804Z" fill="#FF5E14" fill-opacity="0.15"/>
+</svg>

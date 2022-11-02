@@ -1,0 +1,62 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="modinatheme">
+    <!-- ======== Page title ============ -->
+    <title>{{ setting.name_site }}</title>
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon"  href="{{ setting.logo_site.url}}">
+    <!-- ===========  All Stylesheet ================= -->
+    <!--  Icon css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/icons.css' %}">
+    <!--  animate css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <!--  magnific-popup css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <!--  owl carosuel css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <!-- metis menu css file -->
+    <link rel="stylesheet" href="{% static 'assets/css/metismenu.css' %}">
+    <!--  owl theme css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.css' %}">
+    <!--  Bootstrap css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!--  main style css file -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!-- template main style css file -->
+    
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body class="body-wrapper">    
+    {% block content%}
+
+    {%endblock%}
+
+    
+    <!--  ALl JS Plugins
+    ====================================== -->
+    <script src="{% static 'assets/js/modernizr.min.js'%}"></script>
+    <script src="{% static 'assets/js/jquery.min.js'%}"></script>
+    <script src="{% static 'assets/js/jquery.easing.js'%}"></script>
+    <script src="{% static 'assets/js/popper.min.js'%}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'assets/js/isotope.pkgd.min.js'%}"></script>
+    <script src="{% static 'assets/js/imageload.min.js'%}"></script>
+    <script src="{% static 'assets/js/scrollUp.min.js'%}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'assets/js/magnific-popup.min.js'%}"></script>
+    <script src="{% static 'assets/js/counterup.min.js'%}"></script>
+    <script src="{% static 'assets/js/wow.min.js'%}"></script>
+    <script src="{% static 'assets/js/metismenu.js'%}"></script>
+    <script src="{% static 'assets/js/ajax-mail.js'%}"></script>
+    <script src="{% static 'assets/js/active.js'%}"></script>
+</body>
+
+</html>

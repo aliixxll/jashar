@@ -1,0 +1,48 @@
+<svg width="895" height="258" viewBox="0 0 895 258" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<style>
+    @keyframes pulse {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        70% {
+          -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+        }
+        100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      } 
+    @-webkit-keyframes floating-up-left {
+       from { -webkit-transform: translate(0,  0px); transform: translate(0,  0px); }
+      65%  { -webkit-transform: translate(10px, 0); transform: translate(10px, 0); }
+      to   { -webkit-transform: translate(0, 0px); transform: translate(0, 0px); }  
+    }
+    @-webkit-keyframes right {
+       from { -webkit-transform: translate(0,  0px); transform: translate(0,  0px); }
+      65%  { -webkit-transform: translate(-10px, 0); transform: translate(-10px, 0); }
+      to   { -webkit-transform: translate(0, 0px); transform: translate(0, 0px); }  
+    }
+
+    #circle {
+      animation: pulse 2s ease-in-out infinite;
+      -webkit-animation: pulse 2s ease-in-out infinite;
+      -webkit-transform-origin: center; -ms-transform-origin: center; transform-origin: center; transform-box: fill-box;
+    }
+
+    #path_1{
+      animation: right 2s ease-in-out infinite;
+    }  
+    #path_2 {
+         animation: floating-up-left 2s ease-in-out infinite;
+    }
+
+</style>
+
+<path d="M6 1.29102C60.8333 52.4577 247.169 235.361 418.5 149.291C630.5 42.791 815.333 218.291 894 257.291" stroke="white" stroke-opacity="0.1"/>
+<g id="circle"><circle cx="390" cy="144.291" r="7.5" stroke="white" stroke-width="5"/></g>
+<g id="path_1"><path d="M486.938 13.791L493 3.29102L499.062 13.791H486.938Z" stroke="white" stroke-width="3"/></g>
+<g id="path_2"><path d="M6.63268 158.071L7.30421 149.188L14.6609 154.211L6.63268 158.071Z" stroke="white" stroke-width="2"/></g>
+</svg>

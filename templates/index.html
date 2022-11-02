@@ -1,0 +1,972 @@
+{% extends 'homepage.html' %}  
+{% load static %}
+{% block content %}
+    <!-- preloader -->
+    <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <div class="spinner">                
+            </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="B" class="letters-loading">
+                        B
+                    </span>
+                    <span data-text-preloader="U" class="letters-loading">
+                        U
+                    </span>
+                    <span data-text-preloader="S" class="letters-loading">
+                       S
+                    </span>
+                    <span data-text-preloader="I" class="letters-loading">
+                        I
+                    </span>
+                    <span data-text-preloader="C" class="letters-loading">
+                        C
+                    </span>
+                    <span data-text-preloader="O" class="letters-loading">
+                        O
+                    </span>
+                </div>
+            <p class="text-center">Loading</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offset-menu">
+        <span id="offset-menu-close-btn"><i class="fal fa-plus"></i></span>
+        <div class="offset-menu-wrapper text-white">
+            <div class="offset-menu-header">
+                <div class="offset-menu-logo">
+                    <a href="index.html"><img src="{% static 'assets/img/logo.png' %} " alt="logo"></a>
+                </div>
+            </div> 
+            <div class="offset-menu-section">
+                <h3>About Us</h3>
+                <p>We must explain to you how all seds this mistakens idea off denouncing pleasures and praising pain was born and I will give you a completed</p>
+                <a href="contact.html" class="theme-btn  mt-30">Consultation</a>
+            </div>
+            <div class="offset-menu-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><span><i class="fal fa-map"></i></span>Rock St 12, Newyork City, USA</li>
+                    <li><span><i class="fal fa-phone"></i></span>(000) 000-000-0000</li>
+                    <li><span><i class="fal fa-envelope"></i></span>info@example.com</li>
+                    <li><span><i class="fal fa-clock"></i></span>Week Days: 09.00 to 18.00</li>
+                    <li><span><i class="fal fa-clock"></i></span>Sunday: Closed</li>
+                </ul>
+            </div> 
+            <div class="offset-menu-footer">
+                <div class="offset-menu-social-icon">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div> <!-- /.offset-menu-footer -->       
+        </div> <!-- /.offset-menu-wrapper -->               
+    </div> <!-- /.offset-menu --> 
+
+    <!-- welcome content start from here -->
+    {% include 'include/header.html'%}
+
+    <div class="hero-social-elements d-none d-xxl-block">
+        <div class="flp-text">
+            <p>Follow Us</p>
+        </div>
+        <div class="long-arrow"></div>
+        <div class="social-link">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+    <section class="hero-wrapper hero-1">
+        <div class="hero-slider-active owl-carousel owl-loaded owl-drag">
+            <div class="single-slide bg-cover" style="background-image: url('{{setting.image_site.url}}')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 ps-md-5 pe-md-5 col-xxl-7 col-lg-8 col-md-8 col-sm-10">
+                            <div class="hero-contents pe-lg-3">
+                                <h1 class="fs-lg wow fadeInLeft animated" data-wow-duration="1.3s">{{ setting.name_site }}</h1>
+                                <p class="pe-lg-5 wow fadeInLeft animated" data-wow-duration="1.3s" data-wow-delay=".4s">{{setting.description_site}}</p>
+                                <a href="contact.html" class="theme-btn me-sm-4 wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay=".8s">contact us</a>
+                                <a href="about.html" class="plus-text-btn wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay=".6s">
+                                    <div class="icon">
+                                        <i class="fas fa-plus"></i>
+                                    </div>
+                                    <div class="link-text">
+                                        <span>Узнать</span> О нас подробнее
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav"></div>
+    </section>
+
+    <section class="workp-process-section section-padding mtm-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 border-right col-xl-4 col-12">
+                    <div class="single-work-process-item">
+                        <div class="icon">
+                            <i class="flaticon-writing"></i>
+                        </div>
+                        <div class="contents">
+                            <span>Sketch</span>
+                            <h5>Core Planning</h5>
+                            <p>Our promise as a contractor is to build community value into every projects while delivering professional</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6  border-right col-xl-4 col-12">
+                    <div class="single-work-process-item">
+                        <div class="icon">
+                            <i class="flaticon-flow-chart"></i>
+                        </div>
+                        <div class="contents">
+                            <span>Project</span>
+                            <h5>Execution Step</h5>
+                            <p>Our promise as a contractor is to build community value into every projects while delivering professional</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 border-right col-xl-4 col-12">
+                    <div class="single-work-process-item">
+                        <div class="icon">
+                            <i class="flaticon-interior-design"></i>
+                        </div>
+                        <div class="contents">
+                            <span>Architect</span>
+                            <h5>Project Result</h5>
+                            <p>Our promise as a contractor is to build community value into every projects while delivering professional</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section section-padding pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-5 col-12">
+                    <div class="img-block-pop-video">
+                        <img src="{{about_us.image.url}}" alt="busico">
+                        <div class="popup-video-block d-flex justify-content-center align-items-center bg-cover" style="background-image: url('{{about_us.image.url}}')">
+                            <div class="video-play-btn">
+                                <video controls="" autoplay="" width="120px" height="600px"  name="media"><source src="{{about_us.video_url.url}}" type="video/mp4"></video>                     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7 col-md-10 col-12">
+                    <div class="block-contents">
+                        <div class="section-title">
+                            <span>О нас</span>
+                            <h2>{{about_us.title}}</h2>
+                        </div>
+                        <p>{{about_us.description}}</p>
+                    </div>
+                    <div class="tab-content-block">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-technology-tab" data-bs-toggle="pill" data-bs-target="#pills-technology" type="button" role="tab" aria-controls="pills-technology" aria-selected="true">Technology</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-materials-tab" data-bs-toggle="pill" data-bs-target="#pills-materials" type="button" role="tab" aria-controls="pills-materials" aria-selected="false">Materials</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-approved-tab" data-bs-toggle="pill" data-bs-target="#pills-approved" type="button" role="tab" aria-controls="pills-approved" aria-selected="false">Approved</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-technology" role="tabpanel" aria-labelledby="pills-technology-tab">
+                                <div class="tab-inner-contents">
+                                    <div class="img-box">
+                                        <img src="{% static 'assets/img/home1/tab-img.jpg'%}" alt="">
+                                    </div>
+                                    <div class="checked-features-list">
+                                        <ul>
+                                            <li>Intentional development authority</li>
+                                            <li>Stylistic formula method</li>
+                                            <li>Royal ability to listen design</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-materials" role="tabpanel" aria-labelledby="pills-materials-tab">
+                                <div class="tab-inner-contents">
+                                    <div class="img-box">
+                                        <img src="{% static 'assets/img/home1/tab-img2.jpg'%}" alt="">
+                                    </div>
+                                    <div class="checked-features-list">
+                                        <ul>
+                                            <li>Stylistic formula method</li>
+                                            <li>Intentional development authority</li>
+                                            <li>Royal ability to listen design</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-approved" role="tabpanel" aria-labelledby="pills-approved-tab">
+                                <div class="tab-inner-contents">
+                                    <div class="img-box">
+                                        <img src="{% static 'assets/img/home1/tab-img.jpg'%}" alt="">
+                                    </div>
+                                    <div class="checked-features-list">
+                                        <ul>
+                                            <li>Intentional development authority</li>
+                                            <li>Stylistic formula method</li>
+                                            <li>Royal ability to listen design</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                          
+                    </div>
+                    <a href="about.html" class="plus-text-btn mt-lg-5 mt-4">
+                        <div class="icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="link-text">
+                            <span>Explore</span> More about Us
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-service-wrapper section-padding bg-gray">
+        <div class="container">
+            <div class="row mtm-30">
+                <div class="col-md-6 col-12 col-lg-4 mt-30">
+                    <div class="block-contents">
+                        <div class="section-title">
+                            <span>02. Featured Service</span>
+                            <h2>What We Offer You</h2>
+                        </div>
+                        <p>Our promise as a contractor is to build strong community value into every projects</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 col-lg-4 mt-30">
+                    <div class="single-service-box style-1">
+                        <div class="service-bg bg-cover" style="background-image: url('{% static 'assets/img/services/1.jpg'%}')"></div>
+                        <div class="icon">
+                            <i class="flaticon-blueprint"></i>
+                        </div>
+                        <div class="contents">
+                            <h4><a href="services-details.html">Architecture</a></h4>
+                            <p>We commit ourselves to complete all projects within the timeline set with our honorable clients.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 col-lg-4 mt-30">
+                    <div class="single-service-box style-1">
+                        <div class="service-bg bg-cover" style="background-image: url('{% static 'assets/img/services/1.jpg'%}')"></div>
+                        <div class="icon">
+                            <i class="flaticon-interior-design"></i>
+                        </div>
+                        <div class="contents">
+                            <h4><a href="services-details.html">Interior Design</a></h4>
+                            <p>We commit ourselves to complete all projects within the timeline set with our honorable clients.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 col-lg-4 mt-30">
+                    <div class="single-service-box style-1">
+                        <div class="service-bg bg-cover" style="background-image: url('{% static 'assets/img/services/1.jpg'%}')"></div>
+                        <div class="icon">
+                            <i class="flaticon-home"></i>
+                        </div>
+                        <div class="contents">
+                            <h4><a href="services-details.html">Home Decoration</a></h4>
+                            <p>We commit ourselves to complete all projects within the timeline set with our honorable clients.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 col-lg-4 mt-30">
+                    <div class="single-service-box style-1">
+                        <div class="service-bg bg-cover" style="background-image: url('{% static 'assets/img/services/1.jpg'%}')"></div>
+                        <div class="icon">
+                            <i class="flaticon-varnish"></i>
+                        </div>
+                        <div class="contents">
+                            <h4><a href="services-details.html">Repair & Painting</a></h4>
+                            <p>We commit ourselves to complete all projects within the timeline set with our honorable clients.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 col-lg-4 mt-30">
+                    <div class="single-service-box style-1">
+                        <div class="service-bg bg-cover" style="background-image: url('{% static 'assets/img/services/1.jpg'%}')"></div>
+                        <div class="icon">
+                            <i class="flaticon-sketch-1"></i>
+                        </div>
+                        <div class="contents">
+                            <h4><a href="services-details.html">Sketching</a></h4>
+                            <p>We commit ourselves to complete all projects within the timeline set with our honorable clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-wrapper cta-theme-bg">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8 col-xl-7 offset-xl-1 col-12">
+                    <div class="cta-text align-items-center d-md-flex text-center text-md-start">
+                        <i class="flaticon-email"></i>
+                        <h2>Looking for a quality Architect  for your project?</h2>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <a href="contact.html" class="theme-btn border-btn text-center">Get a Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="core-features-wrapper section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xl-6 pe-lg-0 col-12">
+                    <div class="block-contents">
+                        <div class="section-title">
+                            <span>03. Core Features</span>
+                            <h2>View Full project management</h2>
+                        </div>
+                    </div>
+                    <div class="single-icon-circle-item">
+                        <div class="icon">
+                            <i class="flaticon-cpu"></i>
+                        </div>
+                        <div class="contents">
+                            <h3>Innovation</h3>
+                            <p>We are expert and professional.But I must explain to you how all this mistaken ofenoun cing pleasure and praising.</p>
+                        </div>
+                    </div>
+                    <div class="single-icon-circle-item">
+                        <div class="icon">
+                            <i class="flaticon-secure-shield"></i>
+                        </div>
+                        <div class="contents">
+                            <h3>Project Handover</h3>
+                            <p>We are expert and professional.But I must explain to you how all this mistaken ofenoun cing pleasure and praising.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-xl-5 col-12">
+                    <div class="project-details-card bg-gray mt-5 mt-lg-0 ms-lg-4 me-lg-4">
+                        <div class="project-title">
+                            <h3>Harvest Home</h3>
+                            <p>We commit ourselves to complete all projects within the timeline.</p>
+                        </div>
+                        <div class="project-date">
+                            <h6>Execution & Handover Date</h6>
+                            <p>Jan 18 2010 - Jun 23 2015</p>
+                        </div>
+                        <div class="project-client">
+                            <h6>Client Name</h6>
+                            <p>Maxuel D Silva</p>
+                        </div>
+                        <div class="project-estimate d-flex justify-content-between align-items-center">
+                            <div class="single-data">
+                                <h6>POF</h6>
+                                <p>Elemental</p>
+                                <div class="total-ton">
+                                    <h3>24.658</h3>
+                                    <span>Mon</span>
+                                </div>
+                            </div>
+                            <div class="single-data">
+                                <h6>HUI</h6>
+                                <p>Special</p>
+                                <div class="total-ton">
+                                    <h3>224.658</h3>
+                                    <span>Years</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="core-bg d-none d-xl-block bg-cover" style="background-image: url('{% static 'assets/img/home1/core-bg.jpg'%}')"></div>
+    </section>
+
+    <div class="brand-carousel-wrapper dot-bg section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-12">
+                    <div class="brand-carousel-active owl-carousel">
+                        <div class="single-brand-logo">
+                            <img src="{% static 'assets/img/brand-logo/b1.png'%}" alt="">
+                        </div>
+                        <div class="single-brand-logo">
+                            <img src="{% static 'assets/img/brand-logo/b2.png'%}" alt="">
+                        </div>
+                        <div class="single-brand-logo">
+                            <img src="{% static 'assets/img/brand-logo/b3.png'%}" alt="">
+                        </div>
+                        <div class="single-brand-logo">
+                            <img src="{% static 'assets/img/brand-logo/b4.png'%}" alt="">
+                        </div>
+                        <div class="single-brand-logo">
+                            <img src="{% static 'assets/img/brand-logo/b5.png'%}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="testimonial-carousel-wrapper section-padding pb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 text-center col-12">
+                    <div class="block-contents">
+                        <div class="section-title">
+                            <span>04. Testimonials</span>
+                            <h2>What People say about us</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12 col-12">
+                    <div class="testimonial-carousel-active owl-carousel">
+                        <div class="single-testimonial-item">
+                            <p>Construction is an ancient human activity. It began with the purely functional need for a controlled environment to moderate the effects of climate. Constructed shelters were one means by which human beings wereable to adapt themselves to a wide variety of climates .</p>
+                            <div class="client-info">
+                                <h5>Tanner Snyder</h5>
+                                <span>CEO, Snyder Digital</span>
+                            </div>
+                            <div class="client-img bg-cover bg-center" style="background-image: url('{% static 'assets/img/client/1.jpg'%}')"></div>
+                        </div>
+                        <div class="single-testimonial-item">
+                            <p>Construction is an ancient human activity. It began with the purely functional need for a controlled environment to moderate the effects of climate. Constructed shelters were one means by which human beings wereable to adapt themselves to a wide variety of climates .</p>
+                            <div class="client-info">
+                                <h5>Salman Ahned</h5>
+                                <span>CEO, Modina Themes</span>
+                            </div>
+                            <div class="client-img bg-cover bg-center" style="background-image: url('{% static 'assets/img/client/1.jpg'%}')"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-carousel-wrapper clearfix section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-xl-7 col-12">
+                    <div class="block-contents">
+                        <div class="section-title">
+                            <span>05. Best Portfolio</span>
+                            <h2>Recent Completed Projects</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1 col-xl-3 offset-xl-2 text-lg-end col-12">
+                    <a href="projects.html" class="theme-btn">View More Projects</a>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-carousel-active owl-carousel">
+            <div class="single-project-item">
+                <a href="{% static 'assets/img/project/1.jpg'%}" class="project-img bg-cover bg-center popup-gallery" style="background-image: url('{% static 'assets/img/project/1.jpg'%}')">
+                    <div class="icon">
+                        <i class="fal fa-plus"></i>
+                    </div>
+                </a>
+                <div class="content-text">
+                    <span>DESIGN</span>
+                    <h4><a href="project-details.html">CATALYST ARCHITECTS</a></h4>
+                    <p>May 25 2010</p>
+                </div>
+            </div>
+            <div class="single-project-item">
+                <a href="{% static 'assets/img/project/2.jpg'%}" class="project-img bg-cover bg-center popup-gallery" style="background-image: url('{% static 'assets/img/project/2.jpg'%}')">
+                    <div class="icon">
+                        <i class="fal fa-plus"></i>
+                    </div>
+                </a>
+                <div class="content-text">
+                    <span>Interior</span>
+                    <h4><a href="project-details.html">HILIX COMPUND VILLA</a></h4>
+                    <p>Jul 25 2012</p>
+                </div>
+            </div>
+            <div class="single-project-item">
+                <a href="{% static 'assets/img/project/3.jpg'%}" class="project-img bg-cover bg-center popup-gallery" style="background-image: url('{% static 'assets/img/project/3.jpg'%}')">
+                    <div class="icon">
+                        <i class="fal fa-plus"></i>
+                    </div>
+                </a>
+                <div class="content-text">
+                    <span>ARCHITECTS</span>
+                    <h4><a href="project-details.html">Office ARCHITECTS</a></h4>
+                    <p>Jan 05 2013</p>
+                </div>
+            </div>
+            <div class="single-project-item">
+                <a href="{% static 'assets/img/project/4.jpg'%}" class="project-img bg-cover bg-center popup-gallery" style="background-image: url('{% static 'assets/img/project/4.jpg'%}')">
+                    <div class="icon">
+                        <i class="fal fa-plus"></i>
+                    </div>
+                </a>
+                <div class="content-text">
+                    <span>Interior</span>
+                    <h4><a href="project-details.html">Interior Design</a></h4>
+                    <p>Jan 05 2013</p>
+                </div>
+            </div>
+            <div class="single-project-item">
+                <a href="{% static 'assets/img/project/2.jpg'%}" class="project-img bg-cover bg-center popup-gallery" style="background-image: url('{% static 'assets/img/project/2.jpg'%}')">
+                    <div class="icon">
+                        <i class="fal fa-plus"></i>
+                    </div>
+                </a>
+                <div class="content-text">
+                    <span>Decoration</span>
+                    <h4><a href="project-details.html">Home Decoration</a></h4>
+                    <p>Nov 28 2018</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-team-wrapper section-padding pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 text-center col-12">
+                    <div class="block-contents">
+                        <div class="section-title">
+                            <span>06. Skilled Team</span>
+                            <h2>Meet The Expert Team</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xl-4 col-12">
+                    <div class="single-team-member">
+                        <div class="team-img">
+                            <img src="{% static 'assets/img/team/1.png'%}" alt="">
+                        </div>
+                        <div class="team-details-bar">
+                            <div class="member-details">
+                                <div class="member-data">
+                                    <span>Contractor</span>
+                                    <h3>Abraham Reza</h3>
+                                </div>
+                                <div class="social-profile">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <a href="team-details.html" class="plus-btn"><i class="fal fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 col-12">
+                    <div class="single-team-member">
+                        <div class="team-img">
+                            <img src="{% static 'assets/img/team/2.png'%}" alt="">
+                        </div>
+                        <div class="team-details-bar">
+                            <div class="member-details">
+                                <div class="member-data">
+                                    <span>Engineer</span>
+                                    <h3>Salman Ahmed</h3>
+                                </div>
+                                <div class="social-profile">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <a href="team-details.html" class="plus-btn"><i class="fal fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 col-12">
+                    <div class="single-team-member">
+                        <div class="team-img">
+                            <img src="{% static 'assets/img/team/3.png'%}" alt="">
+                        </div>
+                        <div class="team-details-bar">
+                            <div class="member-details">
+                                <div class="member-data">
+                                    <span>Mechanic</span>
+                                    <h3>Daniel David</h3>
+                                </div>
+                                <div class="social-profile">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <a href="team-details.html" class="plus-btn"><i class="fal fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-funfact-section section-padding">
+        <div class="container">
+            <div class="fun-fact-wrapper text-white mtm-30 text-center">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-fun-fact mb-4 mb-lg-0">
+                            <h2><span>30</span>K+</h2>
+                            <h3>PROJECT DONE</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-fun-fact mb-4 mb-lg-0">
+                            <h2><span>980</span>+</h2>
+                            <h3>HAPPY CLIENTS</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-md-0">
+                        <div class="single-fun-fact">
+                            <h2><span>50</span>+</h2>
+                            <h3>Skilled Employee</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-fun-fact">
+                            <h2><span>98</span>%</h2>
+                            <h3>Country Coverage</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-wrapper section-padding pb-0">
+                <div class="row equal">
+                    <div class="col-lg-6 col-12 col-xl-7 pe-lg-0">
+                        <div class="faq-content">
+                            <div class="faq-accordion">
+                                <div class="accordion" id="accordion">
+    
+                                    <div class="accordion-item">
+                                      <h4 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                            How do I find the right architect for my project?
+                                        </button>
+                                      </h4>
+                                      <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            We have intentionally never developed a stylistic formula for our work, which is why our projects never quite look or feel the same. Each of our spaces is the result of our ability to listen.
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="accordion-item">
+                                      <h4 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="true" aria-controls="faq2">
+                                            What services do architects provide?
+                                        </button>
+                                      </h4>
+                                      <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            We have intentionally never developed a stylistic formula for our work, which is why our projects never quite look or feel the same. Each of our spaces is the result of our ability to listen.
+                                        </div>
+                                      </div>
+                                    </div>
+    
+                                    <div class="accordion-item">
+                                      <h4 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                            How do I find the right architect for my project?
+                                        </button>
+                                      </h4>
+                                      <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            We have intentionally never developed a stylistic formula for our work, which is why our projects never quite look or feel the same. Each of our spaces is the result of our ability to listen.
+                                        </div>
+                                      </div>
+                                    </div>
+    
+                                    <div class="accordion-item">
+                                      <h4 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                            How are architects compensated?
+                                        </button>
+                                      </h4>
+                                      <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            We have intentionally never developed a stylistic formula for our work, which is why our projects never quite look or feel the same. Each of our spaces is the result of our ability to listen.
+                                        </div>
+                                      </div>
+                                    </div>
+    
+                                    <div class="accordion-item">
+                                      <h4 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false">
+                                            Can you work with clients long distance?
+                                        </button>
+                                      </h4>
+                                      <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            We have intentionally never developed a stylistic formula for our work, which is why our projects never quite look or feel the same. Each of our spaces is the result of our ability to listen.
+                                        </div>
+                                      </div>
+                                    </div>
+    
+                                </div>                      
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6 col-12 ps-lg-0">
+                        <div class="video-popup-wrapper d-flex justify-content-center align-items-center bg-cover bg-center" style="background-image: url('{% static 'assets/img/faq-bg.jpg'%}')">
+                            <div class="video-play-btn">
+                                <a href="https://www.youtube.com/watch?v=E1xkXZs0cAQ" class="popup-video play-video"><i class="fas fa-play"></i></a>                     
+                            </div>
+                        </div>
+                        <div class="box-cta-call d-flex align-items-center justify-content-between">
+                            <div class="icon">
+                                <i class="flaticon-24-hours"></i>
+                            </div>
+                            <div class="content-text">
+                                <span>Call for support</span>
+                                <h3>(555) 548 201 520</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>    
+
+    <section class="news-wrapper section-padding pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="block-contents">
+                        <div class="section-title">
+                            <span>Our Blog Post</span>
+                            <h2>Latest News</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-4 col-md-6 col-12">
+                    <div class="single-blog-card style-1">
+                        <div class="blog-featured-img bg-cover bg-center" style="background-image: url('{% static 'assets/img/blog/b1.jpg'%}')"></div>
+                        <div class="contents">
+                            <div class="post-metabar d-flex justify-content-between align-items-center">
+                                <div class="post-author">
+                                    <div class="author-img bg-cover bg-center" style="background-image: url('{% static 'assets/img/blog/author2.jpg'%}')"></div>
+                                    <a href="#">Busico</a>
+                                </div>
+                                <div class="post-date">
+                                    <i class="fal fa-calendar-alt"></i>
+                                    <a href="#">28 May 2022</a>
+                                </div>
+                            </div>
+                            <h3><a href="news-details.html">Create Quality videos in seconds using Wix</a></h3>
+                            <a href="news-details.html" class="read-more-link">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-12">
+                    <div class="single-blog-card style-1">
+                        <div class="blog-featured-img bg-cover bg-center" style="background-image: url('{% static 'assets/img/blog/b2.jpg'%}')"></div>
+                        <div class="contents">
+                            <div class="post-metabar d-flex justify-content-between align-items-center">
+                                <div class="post-author">
+                                    <div class="author-img bg-cover bg-center" style="background-image: url('{% static 'assets/img/blog/author2.jpg'%}')"></div>
+                                    <a href="#">Busico</a>
+                                </div>
+                                <div class="post-date">
+                                    <i class="fal fa-calendar-alt"></i>
+                                    <a href="#">17 Nov 2022</a>
+                                </div>
+                            </div>
+                            <h3><a href="news-details.html">Open Your Business For Creative Ideas</a></h3>
+                            <a href="news-details.html" class="read-more-link">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-12">
+                    <div class="single-blog-card style-1">
+                        <div class="blog-featured-img bg-cover bg-center" style="background-image: url('{% static 'assets/img/blog/b3.jpg'%}')"></div>
+                        <div class="contents">
+                            <div class="post-metabar d-flex justify-content-between align-items-center">
+                                <div class="post-author">
+                                    <div class="author-img bg-cover bg-center" style="background-image: url('{% static 'assets/img/blog/author2.jpg'%}')"></div>
+                                    <a href="#">Busico</a>
+                                </div>
+                                <div class="post-date">
+                                    <i class="fal fa-calendar-alt"></i>
+                                    <a href="#">20 Jan 2020</a>
+                                </div>
+                            </div>
+                            <h3><a href="news-details.html">Convince Others Not To Use Dark Patterns</a></h3>
+                            <a href="news-details.html" class="read-more-link">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-1 footer-wrap">
+        <div class="footer-widgets-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 pe-xl-0 col-sm-6 col-12">
+                        <div class="single-footer-wid site_info_widget">
+                            <div class="wid-title">
+                                Связаться<h3></h3>
+                            </div>
+                            <div class="contact-us">
+                                <div class="single-contact-info">
+                                    <div class="icon">
+                                        <i class="fal fa-phone"></i>
+                                    </div>
+                                    <div class="contact-info">
+                                        <p>{{setting.phone_site}}</p>
+                                    </div>
+                                </div>
+                                <div class="single-contact-info">
+                                    <div class="icon">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-info">
+                                        <p>{{setting.email_site}}</p>
+                                    </div>
+                                </div>
+                                <div class="single-contact-info">
+                                    <div class="icon">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-info">
+                                        <p>{{ setting.address_site}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 offset-xl-1 col-xl-3 ps-xl-5 col-12">
+                        <div class="single-footer-wid">
+                            <div class="wid-title">
+                                <h3>Quick Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="about.html">About Company</a></li>
+                                <li><a href="services.html">Communication Services</a></li>
+                                <li><a href="services.html">Internet of Things</a></li>
+                                <li><a href="services.html">Product Development</a></li>
+                                <li><a href="services.html">Industrial Automation</a></li>
+                                <li><a href="contact.html">Payment Getway</a></li>
+                            </ul>
+                        </div>
+                    </div> <!-- /.col-lg-3 - single-footer-wid -->
+
+                    <div class="col-sm-6 col-xl-4 offset-xl-1 col-12">                        
+                        <div class="single-footer-wid newsletter_widget">
+                            <div class="wid-title">
+                                <h3>Newsletter</h3>
+                            </div>
+                            <div class="newsletter_box">
+                                <form action="#">
+                                    <i class="fal fa-envelope"></i>
+                                    <input type="email" placeholder="Enter email address" required>
+                                    <button class="submit-btn" type="submit">Subscribe Now <i class="fas fa-paper-plane"></i></button>
+                                </form>
+                                <p> Время работы : <b>{{setting.wark_time_site}}</b></p>
+                            </div>
+                        </div>
+                    </div> <!-- /.col-lg-3 - single-footer-wid -->
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-cta-wrapper">
+            <div class="container">
+                <div class="footer-cta-bg-wrapper">
+                    <div class="row justify-content-around align-items-center">
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <div class="footer-logo">
+                                <a href="index.html">
+                                    <img src="{{setting.logo_site.url}}" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-5 ps-lg-0 offset-lg-1 col-12">
+                            <div class="footer-middle-text mt-4 mb-4 mt-md-0 mb-md-0 text-white">
+                                <p>{{setting.description_site}}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-12">
+                            <div class="footer-social-icon ms-md-5 text-lg-md-end">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-12 text-center text-md-start">
+                        <div class="copyright-info">
+                            <p>&copy; 2022 Copyright By <a href="index.html">Busico</a>. All Rights Reserved</p>                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="footer-menu mt-3 mt-md-0 text-center text-md-end">
+                            <ul>
+                                <li><a href="#">Teams & Conditions</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>   
+{% endblock %}
